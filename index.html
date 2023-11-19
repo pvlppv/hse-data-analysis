@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =============== TITLE =============== -->
+    <title>{% block title %} DSBA'23 Python Project {% endblock%}</title>
+    <!-- =============== X-ICON =============== -->
+    <link rel="icon" type="image/x-icon" href="static/fcs.png">
+    <!-- =============== ICONS =============== -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- =============== CSS =============== -->
+    <link rel="stylesheet" href="static/main.css">   
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        main {
+            position: relative;
+            overflow: hidden;
+        }
+        
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .head1 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .head2 {
+            font-size: 1.5rem;
+        }
+
+        .head3 {
+            font-size: 1rem;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .download {
+            font-size: 2rem;
+            color: #B6D3F1;
+            cursor: pointer;
+            transition: scale 0.1s ease-in;
+        }
+
+        .download:hover {
+            scale: 1.1;
+        }
+
+        .me {
+            font-size: 2rem;
+            color: #B6D3F1;
+            cursor: pointer;
+            transition: scale 0.1s ease-in;
+        }
+
+        .me:hover {
+            scale: 1.1;
+        }
+
+        
+    </style> 
+</head> 
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="head">
+                <p class="head1">DSBA, Python Project</p>
+                <p class="head2">Pavel Popov, 233</p>
+                <p class="head3">November, 2023</p>
+            </div>
+            <div class="buttons">
+                <a href="/download"><i class='download bx bxs-download'></i></a>
+                <a href="https://t.me/pvlppv" target="_blank"><i class='me bx bxl-telegram'></i></a>    
+            </div>
+        </div>
+        <div class="notebook">
+            {{ notebook | safe }}
+        </div>    
+    </div>
+    <!-- =============== SCRIPTS =============== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</body>
+</html>

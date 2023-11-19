@@ -1,0 +1,61 @@
+/*=============== ASSETS ===============*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --pink-color: #E898FF;
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ::-moz-selection { 
+    color: var(--black-color);
+    background: var(--white-color);
+  }
+  
+::selection {
+    color: var(--white-color);
+    background: var(--black-color);
+} */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: "Montserrat", sans-serif; */
+    transition: background 0.4s; /* for dark mode animation */
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+/*=============== ASSETS ===============*/
+
